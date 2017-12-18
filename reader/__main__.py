@@ -2,7 +2,7 @@ import sys
 
 import reader
 
-r = reader.Reader(sys.argv[1])
+r = reader.reader(sys.argv[1])
 try:
     print(r.read)
 finally:
