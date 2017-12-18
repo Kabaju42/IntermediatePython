@@ -1,8 +1,7 @@
 import os
 
+from reader.Compressed import gzipped
 from reader.compressed import bzipped
-
-from reader.reader.Compressed import gzipped
 
 # Map extensions
 extension_map={
