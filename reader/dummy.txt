@@ -1,0 +1,19 @@
+import reader
+import reader.reader
+>>> reader.reader.__file__
+'C:\\Users\\CCEClass1\\Documents\\merlynhall\\IntermediatePython\\reader\\dummy.txt'
+
+before doing import command in __init__.py file
+>>> r = ('C:\\Users\\CCEClass1\\Documents\\merlynhall\\IntermediatePython\\reader\\dummy.txt')
+>>> f1 = reader.reader.Reader(r)
+>>> f1.read()
+"import reader\nimport reader.reader\n>>> reader.reader.__file__\n'C:\\\\Users\\\\CCEClass1\\\\Documents\\\\merlynhall\\\\IntermediatePython\\\\reader\\\\dummy.txt'\n\n"
+>>> f1.close()
+
+
+
+
+after doing import command in __init__.py file
+>>> import reader
+>>> r =  ('C:\\Users\\CCEClass1\\Documents\\merlynhall\\IntermediatePython\\reader\\dummy.txt')
+>>> fl = reader.Reader(r)

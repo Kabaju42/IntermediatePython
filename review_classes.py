@@ -27,9 +27,8 @@ class Point:
 
     def calculate_distance(self, dist_point):
         return math.sqrt(
-            (_y-dist_point._y)**2 +
-            (_x-dist_point._x)**2)
-
+            (self._y - dist_point._y)**2 +
+            (self._x - dist_point._x)**2)
 
 
 def main():
@@ -38,12 +37,6 @@ def main():
     """
     p1 = Point()
     p2 = Point(2, 5)
-
-    # p1.x = 5
-    # p1.y = 4
-    #
-    # p2.x = 3
-    # p2.y = 6
 
     print(type(p1))
     print(p1._x, p1._y)
