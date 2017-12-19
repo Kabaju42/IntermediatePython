@@ -1,21 +1,10 @@
 import bz2
 import sys
-
-#
+# Do not include the ()
 opener = bz2.open
 
 
-def main():
-    """
-    Test Function
-    """
-    # ./file.py out.bz "YES" "NO" "MAYBE"
+if __name__ == '__main__':
     f = bz2.open(sys.argv[1], mode='wt', encoding='utf-8')
     f.write(' '.join(sys.argv[2:]))
     f.close()
-    pass
-
-
-if __name__ == '__main__':
-    main()
-    exit(0)

@@ -1,2 +1,2 @@
-# get somthing from animal
+# Needs something from animals.py
 from .. import animals
