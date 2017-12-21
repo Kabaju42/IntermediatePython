@@ -13,10 +13,10 @@ import urllib.request
 #
 # todo: tell everyone that [:n] is to take the first n characters...
 
-# download channel.zip
 # http://www.pythonchallenge.com/pc/def/zip.html
 # yes. find the zip.
 
+# download channel.zip
 # readme.txt:
 # welcome to my zipped list.
 #
@@ -32,6 +32,8 @@ def get_Zip_file():
     nums = []
     comments = []
     comments2 = ''
+
+    sum = filenumber
 
     with ZipFile('channel.zip') as zipped:
         pp(zipped.compression)
@@ -50,13 +52,19 @@ def get_Zip_file():
                     comments.append(text)
                     nums.append(filenumber)
 
+                    if text[:15] == 'Next nothing is':
+                        pass
+                    else:
+                        print(text)
+
                     filenumber = int(text[text.find('Next nothing is')+16:])
+                    sum += filenumber
                     # % comments2 = comments2 + '{} '.format(filenumber%128)
 
 
         except ValueError:
             # print(text.split())
-            print('value error')
+            print('value error Sum = {}'.format(sum))
             print(file.name + ' ' + repr(text))
             print(comments)
             # with open('.\\channel\\' + str(filenumber) + '.txt', 'b') as file:

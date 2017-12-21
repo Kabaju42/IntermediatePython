@@ -4,31 +4,27 @@ class Point2D:
         self._y = y
 
     def __str__(self):
-        return '({}, {})'.format(str(self._x), str(self._y))
+        return '({}, {})'.format(self._x, self._y)
 
-    # As a rule you should always add the __repr__
     def __repr__(self):
-        return 'Point2D({}, {})'.format(str(self._x), str(self._y))
-
-    def __add__(self, other):
-        return Point2D(self._x + other._x, self._y + other._y)
+        return "Point2D(x={}, y={})".format(self._x, self._y)
 
     def __format__(self, format_spec):
-        return 'Formatted point: {}, {}, {}'.format(self._x, self._y, format_spec)
+        return "Formatted point: {}, {}, {}".format(
+            self._x, self._y, format_spec)
 
 
 if __name__ == '__main__':
-    p1 = Point2D(5, 7)
-    # p2 = Point2D(-1, 3)
+    print("This is a point {}".format(Point2D(2, 4)))
+    # p1 = Point2D(5, 7)
     # print(p1)
     # print(str(p1))
     # print(repr(p1))
-    # print(p1 + p2)
-    #
-    # # try list
+    # # What about if I have a collection of objects
     # l = [Point2D(x=0, y=0), Point2D(x=1, y=2), Point2D(x=2, y=3)]
     # print(l)
+    # print(repr(l))
+    # # What about a dict
+    # d = {i:Point2D(x=0, y=0) for i in range(3)}
+    # print(repr(d))
 
-    print('This is a point({})'.format(p1))
-
-    # dict works too
